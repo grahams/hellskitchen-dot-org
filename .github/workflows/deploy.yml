@@ -12,9 +12,9 @@ jobs:
         packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@7.0.2
+        uses: burnett01/rsync-deployments@v9
         with:
           switches: -avzr --delete --exclude .git --exclude .github --exclude .gitignore
           path: ./
